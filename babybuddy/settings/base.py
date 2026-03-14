@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
+    'mcp_server',
     'widget_tweaks',
     'easy_thumbnails',
     'storages',
@@ -243,6 +244,21 @@ ROLLING_SESSION_REFRESH = 86400
 
 # Baby Buddy configuration
 # See README.md#configuration for details about these settings.
+
+# Django MCP Server
+# https://github.com/gts360/django-mcp-server
+
+DJANGO_MCP_GLOBAL_SERVER_CONFIG = {
+    'name': 'babybuddy',
+    'instructions': 'Baby Buddy MCP Server for tracking baby care activities.',
+    'stateless': True,
+}
+
+DJANGO_MCP_AUTHENTICATION_CLASSES = [
+    'rest_framework.authentication.TokenAuthentication',
+]
+
+DJANGO_MCP_ENDPOINT = 'mcp'
 
 BABY_BUDDY = {
     'NAP_START_MIN': os.environ.get('NAP_START_MIN') or '06:00',

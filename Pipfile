@@ -21,6 +21,7 @@ boto3 = "*"
 django-import-export = "*"
 pyyaml = "*"
 uritemplate = "*"
+django-mcp-server = "*"
 
 [dev-packages]
 coveralls = "*"
